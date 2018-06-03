@@ -1,0 +1,3447 @@
+{
+	"info": {
+		"_postman_id": "efd47ede-a175-4db0-98ce-33a44da173b9",
+		"name": "Explore the applications via requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Current Weather Data",
+			"description": "",
+			"item": [
+				{
+					"name": "For one location",
+					"description": "",
+					"item": [
+						{
+							"name": "Search only by city name",
+							"description": "",
+							"item": [
+								{
+									"name": "Validation for ISO 3166-1",
+									"description": "",
+									"item": [
+										{
+											"name": "Positive cases",
+											"description": "",
+											"item": [
+												{
+													"name": "MIN value (1)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "21e11bd7-41fb-44ab-8252-a00a7903e904",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. Min value for name of city according to ISO 3166-1 can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"}); ",
+																	"",
+																	"pm.test(\"Response time is less than 300ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(300);",
+																	"});",
+																	""
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{MIN_value}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{MIN_value}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "MIN value with spaces (2)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "3153e6cf-de05-493d-a2ca-b807a03f78ad",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. Min value with 1 space for name of city can be found according to ISO 3166-1\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{MIN_value_spaces}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{MIN_value_spaces}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "MAX value (3)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "b77ddb52-8c59-45de-bc45-71ce611933c8",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. Max value for name of city can be found according to ISO 3166-1\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{MAX_value}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{MAX_value}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "MAX value with spaces (4)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "ae062fe8-0457-4102-9f7a-68fc989c7b68",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. Max value with several spaces for name of city can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{MAX_value_spaces}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{MAX_value_spaces}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "City with lower case (5)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "c5a22cb0-456a-4580-a52e-9a2ea1756f46",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with lower case can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{SMALL}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{SMALL}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "City with upper case (6)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "4ea34a7e-e418-428e-9841-fe71d73b0a4d",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with upper case can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{BIG}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{BIG}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Cities with several words but w/t spaces (7)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "2d3e38b1-4770-4956-b27d-766260973d93",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with several word but that was written without spaces can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{ONE_WORD}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{ONE_WORD}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Cities with allowed didactrics symbols (8)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "a2309bc3-120d-4c98-95af-32631407293a",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with didactrics symbols can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"auth": {
+															"type": "noauth"
+														},
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{DIDACTRIC}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{DIDACTRIC}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "Negative cases",
+											"description": "",
+											"item": [
+												{
+													"name": "Empty value (9)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "673a2a49-817d-4065-85a8-78cbeb2f49de",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. Didn't return any resulte in case of empty value\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Empty}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Empty}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Misprint in name of city (10)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "c7bd6a99-712d-40cb-aca2-0668f3e8f6e8",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of missprints in the name of city\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Miss}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Miss}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Numbers (11)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "123ce232-b207-4bfc-80c0-e4c5f8669920",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results numbers instead of letters\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Numbers}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Numbers}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Cyrilic names of cities (12)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "02a82816-7fbf-4e7a-a5e2-b11f78bb4f1e",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of cyrillic name of city\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Cyrillic}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Cyrillic}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Hieroglyph (13)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "2fcbb9c6-f129-4b5d-abe3-855d050d9b19",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of hieroglyphs\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Hieroglyph}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Hieroglyph}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Arabic (14)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "97840214-bb82-4201-91f3-93ef088f9dd3",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of arabic names of cities\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Arabic}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Arabic}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "City with non allowed didactric (15)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "bf6c18bf-8a83-4654-8b25-44768763f67d",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of non-allowed didactrics\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{No_didactric}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{No_didactric}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Symbols (16)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "2567efd1-3b2d-4120-a025-4bfb6110ad30",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location.Didn't return any results in case of symbols\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{CurrentWeather}}={{Symbols}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{CurrentWeather}}={{Symbols}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Different countries",
+									"description": "",
+									"item": [
+										{
+											"name": "South America (17)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "e0c79753-f1dd-44ff-b11a-20dde15306c4",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for South America can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Sam}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Sam}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "North America (18)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "5a974327-f1c0-43e1-a064-0a5dbb5a1ce3",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for North America can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Nam}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Nam}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Greenland (19)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "26f45db4-35dd-4c61-abaf-0495699d2a97",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for Greenland can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Green}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Green}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Europe (20)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "c267f32e-aecb-4e51-8531-63c907121ede",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for Europe can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Eur}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Eur}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Asia (21)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "09c5a679-189e-44c8-a3b4-178ef7ebcb82",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for Asia can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Asi}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Asi}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Africa (22)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "dfbd0f22-f1b3-4149-bddd-3e3b84a13439",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for Africa can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{Afr}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{Afr}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Australia (23)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "b8bb7892-06f6-43f1-bbf2-91d9f24322fb",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"Cities for Australia can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 350ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(350);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{CurrentWeather}}={{AU}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{CurrentWeather}}={{AU}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "1bd687f0-4fd8-46a7-8175-9aa99251b8f3",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "75ad5ca6-c782-4747-9d96-363ea7da7686",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Search by valid city name and coutry code",
+							"description": "",
+							"item": [
+								{
+									"name": "Validation",
+									"description": "",
+									"item": [
+										{
+											"name": "ISO 3166 alpha-2",
+											"description": "",
+											"item": [
+												{
+													"name": "Positive cases for ISO 3166 alpha-2",
+													"description": "",
+													"item": [
+														{
+															"name": "Min value for code + upper case (24)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "6520a480-13ef-4f1d-bd2e-b8f85a1ce314",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can return the results for the min code from ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max value for code + upper case (25)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "87181bc0-0f75-4029-85ca-abc4f417806f",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can return the results for the max code from ISO 3166-1 alpha-2 which was written with upper case \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with lower case (26)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "9466c75f-7be3-4931-9fc7-13257c65ac25",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can return the results for code from ISO 3166-1 alpha-2 which was written with lower case \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City3}},{{Low_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City3}},{{Low_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												},
+												{
+													"name": "Negative cases for ISO 3166 alpha-2",
+													"description": "",
+													"item": [
+														{
+															"name": "Min+1 value for length (27)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "9a89b66a-9c0f-44ad-93d7-47feda8e0a22",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if the length of code is min-1 according to ISO 3166-1 alpha-2\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min-1_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min-1_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Min+1 value for code (28)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "42677428-8e50-472b-88fd-26815cd52c68",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if value for code is min+1 according to ISO 3166-1 alpha-2\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min-1_value_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Min-1_value_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value for length (29)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "f4a66a8c-728b-40c5-981e-2faf9e57dc64",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if the length of code is max+1 according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Max+1_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Max+1_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value for code (30)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "8aececd7-67af-445d-a22d-6bd27e821cc9",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if the value of code is max+1 according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max+1_value_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max+1_value_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Numbers for city and valid code (31)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "a90a9a5c-b6a7-43e3-9996-d6866231d7d6",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if the value of code is valid but the value for city is invalid data according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Numbers}},{{Valid_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Numbers}},{{Valid_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with symbols (32)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "fd53746d-e8bf-49f4-83eb-72fcd873c25c",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case if the value of code contains symbols according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Symbols_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Symbols_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Non existing code (33)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "1df86805-c0cb-495b-bad5-852173371d4f",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case of non-existing code according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City4}},{{NonExisting_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City4}},{{NonExisting_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with didactric (34)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "ec947624-d129-42ba-b5cf-94801bac1fb3",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results if existing code contains didactic symbols according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Didactic_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Didactic_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with cyrillic (35)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "de732d42-71b6-4ebc-ad2c-0e567298f98b",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results if code contains cyrillic according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Cyrillic_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Cyrillic_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Empty code (36)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "ebad14dd-7882-4145-a2ee-8287032be045",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results if code is empty according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Empty_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City1}},{{Empty_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Empty city and valid code (37)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "27e4f5f3-e895-4bd6-9c43-f989cbf1d69a",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case of empty city and existing code according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Empty}},{{Min_Code_A2}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Empty}},{{Min_Code_A2}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Empty city and code (38)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "80807d19-5b76-4541-a8ea-7bbd5748fc59",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. The system can't return the results in case of empty city and code according to ISO 3166-1 alpha-2 \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Empty}},{{Empty_Code}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Empty}},{{Empty_Code}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "ISO 3166-1 alpha-3",
+											"description": "",
+											"item": [
+												{
+													"name": "Positive cases for ISO 3166-1 alpha-3",
+													"description": "",
+													"item": [
+														{
+															"name": "Min value for code + upper case (39)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "1c89d30e-b0ab-4131-a0a5-e9fdbaf07b8b",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min value that was written with upper case according to ISO 3166-1 alpha-3 can be found\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{MIN_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{MIN_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max value for code + upper case (40)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "0fab366c-70cc-41ec-85f4-2075b1c4f096",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value that was writter with upper case according to ISO 3166-1 alpha-3 can be found\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{MAX_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{MAX_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with lower case (41)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "96574d58-1389-4c1d-a112-7c044de8010c",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value that was written with upper case according to ISO 3166-1 alpha-3 can be found\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City6}},{{Lower_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City6}},{{Lower_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												},
+												{
+													"name": "Negative cases for ISO 3166-1 alpha-3",
+													"description": "",
+													"item": [
+														{
+															"name": "Min-1 value for code (42)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "4e0ee6d4-325f-4006-b72c-0f94ee45a4f4",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 value for code according to ISO 3166-1 alpha-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{Min-1_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{Min-1_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value for code (43)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "1381ab70-a907-4abf-99c8-baf9db93ec5c",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 valuefor code according to ISO 3166-1 alpha-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max-1_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City2}},{{Max-1_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 length for code (44)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "b13d33a5-dd60-4e02-a2b7-1cba08af8d57",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 length for code according to ISO 3166-1 alpha-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{Max+1_value_Code_A3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City5}},{{Max+1_value_Code_A3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "ISO 3166-1 numeric",
+											"description": "",
+											"item": [
+												{
+													"name": "Positive cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min code (45)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "1fa96e6f-6f58-4f75-af2f-b08f67aeaf65",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min value for code according to ISO 3166-1 numeric can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max code (46)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "6664a134-d5da-4ae8-b9d9-75c53f2c85c1",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value for code according to ISO 3166-1 numeric can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Numeric code (47)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "3f50ab38-794f-48ed-a788-2923a494adde",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. City can be foune by valid code according to ISO 3166-1 numeric and valid name\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City9}},{{Code_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City9}},{{Code_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												},
+												{
+													"name": "Negative cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min-1 length for code (48)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "79264784-a7fb-48c6-bd71-115bd2ebd018",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 length for code according to ISO 3166-1 numeric can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min-1_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min-1_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 length for code (49)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "9c3babd5-6ece-4bcf-b09e-be406b0fafcd",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 length for code according to ISO 3166-1 numeric can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max+1_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max+1_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Min-1 value for code (50)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "49512b54-680e-4d3b-bfde-7a34659d7f76",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 value for code according to ISO 3166-1 numeric can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min-1_value_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City7}},{{Min-1_value_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value for code (51)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "d42d4843-9d54-474d-a9eb-491b65c947e2",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 value for code according to ISO 3166-1 numeric can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max+1_value_Num}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City8}},{{Max+1_value_Num}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "ISO 3166-2",
+											"description": "",
+											"item": [
+												{
+													"name": "Positive cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min value+upper case (52)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "91451848-5453-4132-9823-a26982d5d674",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min value for code wtitten with upper case according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Min_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Min_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max value+upper case (53)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "c492d24f-3727-488f-b6a0-f408695d5a53",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value for code written with upper case according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City11}},{{Max_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City11}},{{Max_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Lower case (54)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "b862e29c-7ba1-4f2b-8147-bd578942e5bb",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value for code according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Low_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Low_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Min length (55)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "87b9911d-4f6c-4cf1-985b-d4feaa782d65",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min length for code according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City12}},{{Min_length_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City12}},{{Min_length_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max length (56)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "8d33c628-9bdb-496a-9db0-fd2217cc85b8",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max length for code according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City14}},{{Max_length_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City14}},{{Max_length_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with letters only (57)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "2622357d-f90a-4214-85f6-00163c90e64e",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Code with letters only according to ISO 3166-2 can be found \", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{Letters_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{Letters_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												},
+												{
+													"name": "Negative cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min-1 value (58)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "7bcfe726-965e-41ba-aa06-ebca9262482b",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 value for code according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Min-1_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City10}},{{Min-1_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value (59)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "984438cc-f866-417d-94f7-927875491d3e",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 value for code according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City11}},{{Max+1_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City11}},{{Max+1_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Min-1 length (60)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "91130c86-7d66-41f0-bf4e-9d04467f03d5",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 length for code according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City12}},{{Min-1_length_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City12}},{{Min-1_length_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 length (61)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "522f1744-f599-4a16-8713-4895d0859eb4",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 length for code according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City14}},{{Max+1_length_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City14}},{{Max+1_length_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code without divided character (62)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "af0c9858-b1eb-49e1-9e03-1d1ff9b45d4f",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Code without divided character according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{NoCharacter_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{NoCharacter_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Code with other divided character (63)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "13700c60-41cf-4deb-b977-a9b4248294f9",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Code with other divided character according to ISO 3166-2 can't be found \", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{Character_district}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City13}},{{Character_district}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "ISO 3166-3",
+											"description": "",
+											"item": [
+												{
+													"name": "Positive cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min value for code (64)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "43603041-c4da-4d3d-8a83-2f6490cdf415",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min value for code according to ISO 3166-3 can be found\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max value for code (65)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "4c6770ca-c292-4f0d-95b3-8fe87a23045e",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max value for code according to ISO 3166-3 can be found\", function () {",
+																			"    pm.response.to.have.status(200);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City16}},{{Max_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City16}},{{Max_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												},
+												{
+													"name": "Negative cases",
+													"description": "",
+													"item": [
+														{
+															"name": "Min-1 value for code (66)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "35243a54-c015-4adb-85cc-93b3b5d17d2d",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 value for code according to ISO 3166-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min-1_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min-1_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 value for code (67)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "38f12c42-d5c1-46f7-844f-8f72125c892d",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 value for code according to ISO 3166-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City16}},{{Max+1_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City16}},{{Max+1_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Min-1 length for code (68)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "61cb06d7-fea8-46d4-8ade-dc78046e32c3",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Min-1 length for code according to ISO 3166-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min-1_length_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Min-1_length_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "Max+1 length for code (69)",
+															"event": [
+																{
+																	"listen": "test",
+																	"script": {
+																		"id": "94b29e7f-8c01-4e21-8ba4-6bc595c25650",
+																		"type": "text/javascript",
+																		"exec": [
+																			"pm.test(\"One Location. Max+1 length for code according to ISO 3166-3 can't be found\", function () {",
+																			"    pm.response.to.have.status(404);",
+																			"});",
+																			"",
+																			"pm.test(\"Response time is less than 350ms\", function () {",
+																			"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																			"});"
+																		]
+																	}
+																}
+															],
+															"request": {
+																"method": "GET",
+																"header": [],
+																"body": {},
+																"url": {
+																	"raw": "{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Max+1_length_3}}&{{Key}}",
+																	"host": [
+																		"{{TestUrl}}{{CurrentWeather}}={{Valid_City15}},{{Max+1_length_3}}&{{Key}}"
+																	]
+																}
+															},
+															"response": []
+														}
+													],
+													"_postman_isSubFolder": true
+												}
+											],
+											"_postman_isSubFolder": true
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Search by ZIP code",
+							"description": "",
+							"item": [
+								{
+									"name": "Positive cases",
+									"description": "",
+									"item": [
+										{
+											"name": "Min length for ZIP code (70)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "833e6c09-ec5b-4e6f-abb1-a7e3215f1269",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. City by min zip code can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Min_Zip}},{{TestCode_1}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Min_Zip}},{{TestCode_1}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Max length for ZIP code (71)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "20e2aa39-472a-446e-a150-9e90fe355040",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. City by max zip code can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Max_Zip}},{{TestCode_2}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Max_Zip}},{{TestCode_2}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "ZIP code with numbers and letters (72)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "ced4fc29-8a99-4325-9e01-169f3fe1aa10",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. City by zip code that contains numbers and letters can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Numbers+Letters_Zip}},{{TestCode_3}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Numbers+Letters_Zip}},{{TestCode_3}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "ZIP code with divided elements (73)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "e1e01af1-340e-40f3-91e2-adb389dfd3c9",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. City by zip code that is written with divided characters can be found\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Div_Zip}},{{TestCode_4}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Div_Zip}},{{TestCode_4}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "ZIP code without code (74) (US Zip code)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "ff44d666-a608-4bd3-937a-aa6b8bc9363b",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. City by zip code but without code for country can be found only for american cities\", function () {",
+															"    pm.response.to.have.status(200);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{TestZip}},{{Empty_Code}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{TestZip}},{{Empty_Code}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Negative cases",
+									"description": "",
+									"item": [
+										{
+											"name": "Min-1 length for ZIP code (75)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "29370260-ff52-412f-a69d-f381b425c925",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Min-1 length of zip code can't be found\", function () {",
+															"    pm.response.to.have.status(404);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Min-1_Zip}},{{TestCode_1}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Min-1_Zip}},{{TestCode_1}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Max+1 length for ZIP code (76)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "83dd5e31-b599-4de9-b3f6-5a5e519a14f1",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Max+1 length of zip code can't be found\", function () {",
+															"    pm.response.to.have.status(404);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Max+1_Zip}},{{TestCode_2}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Max+1_Zip}},{{TestCode_2}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "ZIP code devided by other characters (77)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "70492bf2-d75f-44d2-a250-d58204e96a38",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Zip code divided with other characters can't be found\", function () {",
+															"    pm.response.to.have.status(404);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Div_other_Zip}},{{TestCode_4}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Div_other_Zip}},{{TestCode_4}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "ZIP code without code country (78) (non US ZIP code)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "9d7c5bf8-ba87-4007-8a8e-a0278396cce9",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Country with non-US zip code and without set country code can't be found\", function () {",
+															"    pm.response.to.have.status(404);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{NonUS_Zip}},{{Empty_Code}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{NonUS_Zip}},{{Empty_Code}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Empty zip code and valid code (79)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "bfb01e24-d699-4a67-a5b9-d3e0e03c73b5",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Country with empty zip code and valid country code can't be found\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Empty}},{{TestCode_3}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Empty}},{{TestCode_3}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Empty zip code and code (80)",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "dc67f6f1-364a-451a-abbd-eacb88bb0bd3",
+														"type": "text/javascript",
+														"exec": [
+															"pm.test(\"One Location. Country with empty zip code and country code can't be found\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response time is less than 200ms\", function () {",
+															"    pm.expect(pm.response.responseTime).to.be.below(200);",
+															"});"
+														]
+													}
+												}
+											],
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {},
+												"url": {
+													"raw": "{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Empty}},{{Empty}}&{{Key}}",
+													"host": [
+														"{{TestUrl}}{{SearchCurrentWeatherByZip}}={{Empty}},{{Empty}}&{{Key}}"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Search by city ID",
+							"description": "",
+							"item": [
+								{
+									"name": "Validation",
+									"description": "",
+									"item": [
+										{
+											"name": "Positive cases",
+											"description": "",
+											"item": [
+												{
+													"name": "Min value for ID (81)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "587210d7-94a0-456f-8a70-673ea0ff0169",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by min value for ID can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Max value for ID (82)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "46b1dc68-cb8e-47bb-b90d-1d693ccfa682",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by max value for ID can be found\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "Negative cases",
+											"description": "",
+											"item": [
+												{
+													"name": "Min-1 value for ID (83)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "2c38d116-17f2-48dd-901c-4db5956d108b",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by min-1 value for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min-1_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min-1_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Max+1 value for ID (84)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "41f8e568-24a5-4f7b-8562-dd6d027f1fb0",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by max+1 value for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max+1_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max+1_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Min-1 length for ID (85)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "670da871-9d81-498e-b00b-45aaeb0f7f9f",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by min-1 length for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min-1_length_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Min-1_length_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Max+1 length for ID (86)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "366fd24b-0f63-447b-948b-5e13b9b93bef",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by max+1 length for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(404);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max+1_length_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Max+1_length_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Letters for ID (87)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "5a249ac4-f009-4ec9-8d5e-22779ec0bc8f",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by letters for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Letter_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Letter_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "ID with symbols (88)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "b3b36c51-302b-47ab-bc45-41eb33f5c6a1",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by symbols for ID can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Symbol_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Symbol_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "ID is 0 (89)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "38e9b7b8-bfd8-4c0e-850c-58e496332907",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with ID =0 can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Null_ID}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Null_ID}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "empty ID (90)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "a2bdb57e-097f-47d3-b145-37d056c5cdf4",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City with empty ID can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Empty}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherByCityID}}={{Empty}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Search by georpahic coordinates",
+							"description": "",
+							"item": [
+								{
+									"name": "Format",
+									"description": "",
+									"item": [
+										{
+											"name": "Positive cases",
+											"description": "",
+											"item": [
+												{
+													"name": "Coordinates in DD.DDDDD (91) (only integer part)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "5428bfa4-67cf-4b60-bfda-5a193e1e97c3",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by geographic coordinats in DD.DDDDD format can be found (only integer part)\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DD.DDDDD}}&lon{{Lon_DD.DDDDD}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DD.DDDDD}}&lon{{Lon_DD.DDDDD}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Coordinates in DD.DDDDD (92) (with fractional part)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "fb9e4891-ad47-43a6-a0e2-885a004aa3f5",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by geographic coordinats in DD.DDDDD format can be found (with fractional part)\", function () {",
+																	"    pm.response.to.have.status(200);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_FR_DD.DDDDD}}&lon{{Lon_FR_DD.DDDDD}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_FR_DD.DDDDD}}&lon{{Lon_FR_DD.DDDDD}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										},
+										{
+											"name": "Negative cases",
+											"description": "",
+											"item": [
+												{
+													"name": "Coordinates in DD.MM.SS format (93)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "18afc961-913f-4fae-84cc-1b2fb3aa9175",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by geographic coordinats in DD MM SS format can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DDMMSS}}&lon{{Lon_DDMMSS}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DDMMSS}}&lon{{Lon_DDMMSS}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Coordinates in DD.MM.MM format (94)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "8d2e78a4-78e6-4c18-9d8d-5b544972a168",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by geographic coordinats in DD MM.MM format can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DDMMSS}}&lon{{Lon_DDMMSS}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DDMMSS}}&lon{{Lon_DDMMSS}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "Coordinates in DD.DDDDD format (with fractional part - comma) (95)",
+													"event": [
+														{
+															"listen": "test",
+															"script": {
+																"id": "49f94709-8e81-422b-8652-0d1619c39306",
+																"type": "text/javascript",
+																"exec": [
+																	"pm.test(\"One Location. City by geographic coordinats in DD.DDDD format where fractional part was written with comma  can't be found\", function () {",
+																	"    pm.response.to.have.status(400);",
+																	"});",
+																	"",
+																	"pm.test(\"Response time is less than 350ms\", function () {",
+																	"    pm.expect(pm.response.responseTime).to.be.below(350);",
+																	"});"
+																]
+															}
+														}
+													],
+													"request": {
+														"method": "GET",
+														"header": [],
+														"body": {},
+														"url": {
+															"raw": "{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DD_comma}}&lon{{Lon_DD_comma}}&{{Key}}",
+															"host": [
+																"{{TestUrl}}{{SearchCurrentWeatherCoord}}lat={{Lat_DD_comma}}&lon{{Lon_DD_comma}}&{{Key}}"
+															]
+														}
+													},
+													"response": []
+												}
+											],
+											"_postman_isSubFolder": true
+										}
+									],
+									"_postman_isSubFolder": true
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
