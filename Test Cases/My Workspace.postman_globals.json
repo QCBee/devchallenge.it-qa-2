@@ -1,0 +1,747 @@
+{
+  "id": "146e52f0-fd32-4814-8e58-8a3c0f4d5eb7",
+  "values": [
+    {
+      "key": "Key",
+      "value": "APPID=55c53cdf9a5cf6a8dbbbdf33cb43307d",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestUrl",
+      "value": "http://api.openweathermap.org/data/2.5/",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "CurrentWeather",
+      "value": "weather?q",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MIN_value",
+      "value": "Chad",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MIN_value_spaces",
+      "value": "Viet%20Nam",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MAX_value",
+      "value": "Mauritania",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MAX_value_spaces",
+      "value": "Heard%20Island%20and%20McDonald%20Islands",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Sam",
+      "value": "Brasil",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Nam",
+      "value": "Chicago",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Green",
+      "value": "Uummannaq",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Eur",
+      "value": "France",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Asi",
+      "value": "China",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Afr",
+      "value": "Nigeria",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Aus",
+      "value": "Sydney",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Empty",
+      "value": "",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Miss",
+      "value": "Lonfon",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Numbers",
+      "value": "1234567890",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "SMALL",
+      "value": "london",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "BIG",
+      "value": "LONDON",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "ONE_WORD",
+      "value": "VietNam",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "DIDACTRIC",
+      "value": "Réunion",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Cyrillic",
+      "value": "Франция",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Hieroglyph",
+      "value": "鞍山",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "No_didactric",
+      "value": "Köln",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Symbols",
+      "value": "Costa-rica",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Arabic",
+      "value": "الإمارات العربية المتحد",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City1",
+      "value": "Andorra",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_Code_A2",
+      "value": "AD",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City2",
+      "value": "Zimbabwe",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_Code_A2",
+      "value": "ZW",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City3",
+      "value": "Colombia",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Low_Code_A2",
+      "value": "co",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_Code_A2",
+      "value": "A",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_value_Code_A2",
+      "value": "AB",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_Code_A2",
+      "value": "ADA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_value_Code_A2",
+      "value": "ZX",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Numbers_Code",
+      "value": "12",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_Code",
+      "value": "AE",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Symbols_Code",
+      "value": "Z-",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City4",
+      "value": "Anguilla",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "NonExisting_Code",
+      "value": "AH",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Didactic_Code",
+      "value": "ÄG",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Cyrillic_Code",
+      "value": "АД",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Empty_Code",
+      "value": "",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City5",
+      "value": "Aruba",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MIN_Code_A3",
+      "value": "ABW",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "MAX_Code_A3",
+      "value": "ZWE",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City6",
+      "value": "Zambia",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lower_Code_A3",
+      "value": "zmb",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_Code_A3",
+      "value": "ABV",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max-1_Code_A3",
+      "value": "ZWF",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_value_Code_A3",
+      "value": "ABWA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City7",
+      "value": "Afghanistan",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_Num",
+      "value": "004",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City8",
+      "value": "Zambia",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_Num",
+      "value": "894",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_Num",
+      "value": "00",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_Num",
+      "value": "8941",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_value_Num",
+      "value": "003",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_value_Num",
+      "value": "895",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City9",
+      "value": "Ukraine",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Code_Num",
+      "value": "804",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City10",
+      "value": "Canillo",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_district",
+      "value": "AD-02",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City11",
+      "value": "WesternCape",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_district",
+      "value": "ZA-WC",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Low_district",
+      "value": "ad-02",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City12",
+      "value": "Burgenland",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_length_district",
+      "value": "AT-1",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City13",
+      "value": "Baku",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Letters_district",
+      "value": "AZ-BA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City14",
+      "value": "Badakhshan",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_length_district",
+      "value": "AF-BDS",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_district",
+      "value": "AD-01",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_district",
+      "value": "ZA-WD",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_length_district",
+      "value": "AT-",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_length_district",
+      "value": "AF-BDSA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "NoCharacter_district",
+      "value": "AZBA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Character_district",
+      "value": "AZ/BA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City15",
+      "value": "FrenchAfarandIssas",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_3",
+      "value": "AIDJ",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Valid_City16",
+      "value": "Zaire",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_3",
+      "value": "ZRCD",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_3",
+      "value": "AIDI",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_3",
+      "value": "ZRCE",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_length_3",
+      "value": "AID",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_length_3",
+      "value": "AIDJA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_Zip",
+      "value": "1010",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestCode_1",
+      "value": "AT",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_Zip",
+      "value": "920273600",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestCode_2",
+      "value": "US",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Numbers+Letters_Zip",
+      "value": "AB10",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestCode_3",
+      "value": "UK",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "SearchCurrentWeatherByZip",
+      "value": "weather?zip",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Div_Zip",
+      "value": "519-31",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestCode_4",
+      "value": "UA",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "TestZip",
+      "value": "00401",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_Zip",
+      "value": "101",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_Zip",
+      "value": "9202736001",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Div_other_Zip",
+      "value": "519/31",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "NonUS_Zip",
+      "value": "51931",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "SearchCurrentWeatherByCityID",
+      "value": "weather?id",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min_ID",
+      "value": "833",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max_ID",
+      "value": "102908597",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_ID",
+      "value": "832",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_ID",
+      "value": "102908598",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Min-1_length_ID",
+      "value": "83",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Max+1_length_ID",
+      "value": "1029085981",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Letter_ID",
+      "value": "testid",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Symbol_ID",
+      "value": "10290-8598",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Null_ID",
+      "value": "0",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "SearchCurrentWeatherCoord",
+      "value": "weather?",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lat_DD.DDDDD",
+      "value": "34",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lon_DD.DDDDD",
+      "value": "44",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lat_FR_DD.DDDDD",
+      "value": "44.549999",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lon_FR_DD.DDDDD",
+      "value": "34.283333",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lat_DDMMSS",
+      "value": "345612",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lon_DDMMSS",
+      "value": "445678",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lat_DDMMMM",
+      "value": "3456.12",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lon_DDMMMM",
+      "value": "4456.78",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lat_DD_comma",
+      "value": "34,45",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "Lon_DD_comma",
+      "value": "44,56",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "AU",
+      "value": "Sydney",
+      "enabled": true,
+      "type": "text"
+    }
+  ],
+  "name": "My Workspace Globals",
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2018-06-03T17:36:29.401Z",
+  "_postman_exported_using": "Postman/6.1.3"
+}
